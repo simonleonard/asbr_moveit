@@ -1,3 +1,6 @@
+# Developer: Seyi R. Afolayan 
+# Credits: Denis Stogl
+
 import os
 
 from launch_ros.actions import Node
