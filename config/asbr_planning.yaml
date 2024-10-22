@@ -1,7 +1,0 @@
-planner_configs:
-  ASBRPlanner:
-    type: ASBRPlanner
-
-manipulator:
-  planner_configs:
-    - ASBRPlanner

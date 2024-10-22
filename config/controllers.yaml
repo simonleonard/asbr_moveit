@@ -1,12 +1,10 @@
 controller_names:
-  - scaled_joint_trajectory_controller
-  - joint_trajectory_controller
-  - robotiq_gripper_controller
-
-scaled_joint_trajectory_controller:
-  action_ns: follow_joint_trajectory
+  - ur5e_controller
+  
+ur5e_controller:
+  action_ns: ur5e
   type: FollowJointTrajectory
-  default: true  # Primary controller for the arm
+  default: false
   joints:
     - shoulder_pan_joint
     - shoulder_lift_joint
@@ -14,22 +12,4 @@ scaled_joint_trajectory_controller:
     - wrist_1_joint
     - wrist_2_joint
     - wrist_3_joint
-
-joint_trajectory_controller:
-  action_ns: follow_joint_trajectory
-  type: FollowJointTrajectory
-  default: false  # Not the default, but available as an alternative
-  joints:
-    - shoulder_pan_joint
-    - shoulder_lift_joint
-    - elbow_joint
-    - wrist_1_joint
-    - wrist_2_joint
-    - wrist_3_joint
-
-robotiq_gripper_controller:
-  action_ns: gripper_cmd
-  type: GripperCommand
-  default: false  # Not the default; gripper-specific controller
-  joints:
-    - robotiq_85_left_knuckle_joint
+    - robotiqrobotiq_85_left_knuckle_joint

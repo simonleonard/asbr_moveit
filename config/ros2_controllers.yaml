@@ -1,24 +1,23 @@
 # This config file is used by ros2_control
-controller_manager:
+controller_names:
   ros__parameters:
     update_rate: 100  # Hz
 
-    ur5_controller:
+    ur5e_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
 
-    gripper_controller:
+    robotiq_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
 
     manipulator_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-ur5_controller:
+ur5e_controller:
   ros__parameters:
     joints:
       - shoulder_pan_joint
@@ -32,14 +31,17 @@ ur5_controller:
     state_interfaces:
       - position
       - velocity
-gripper_controller:
+      
+robotiq_controller:
   ros__parameters:
-    joint: robotiq_85_left_knuckle_joint
+    joint: 
+      - robotiqrobotiq_85_left_knuckle_joint
     command_interfaces:
       - position
     state_interfaces:
       - position
       - velocity
+
 manipulator_controller:
   ros__parameters:
     joints:
@@ -49,7 +51,7 @@ manipulator_controller:
       - wrist_1_joint
       - wrist_2_joint
       - wrist_3_joint
-      - robotiq_85_left_knuckle_joint
+      - robotiqrobotiq_85_left_knuckle_joint
     command_interfaces:
       - position
     state_interfaces:
