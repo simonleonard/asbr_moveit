@@ -1,0 +1,15 @@
+    <!--VIRTUAL JOINT Purpose this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link"/>
+    
+      <link name="d435_link"/>
+      <link name="d435_usb_plug_link"/>
+      <link name="ur_to_robotiq_link"/>
+      <link name="robotiqrobotiq_85_base_link"/>
+      <link name="robotiqrobotiq_85_left_inner_knuckle_link"/>
+      <link name="robotiqrobotiq_85_left_knuckle_link"/>
+      <link name="robotiqrobotiq_85_left_finger_link"/>
+      <link name="robotiqrobotiq_85_left_finger_tip_link"/>
+      <link name="robotiqrobotiq_85_right_inner_knuckle_link"/>
+      <link name="robotiqrobotiq_85_right_knuckle_link"/>
+      <link name="robotiqrobotiq_85_right_finger_link"/>
+      <link name="robotiqrobotiq_85_right_finger_tip_link"/>
